@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.Mainimg{
+    border: 1px solid black;
+    position: relative;
+    width: 75%;
+    height: 100%;
+}
+.fa-arrow-up{
+    position: absolute;
+    top:0;
+    right: 50%;
+    margin-top: 10px;
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.fa-arrow-down{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    margin-bottom: 10px;
+     padding: 3px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.Orderimg{
+    width: 25%;
+    height: 100%;
+}
+.Orderimg>div{
+    height: calc(100% / 5);
+    width: 100%;
+    border: 1px solid black;
+}
