@@ -18,7 +18,7 @@ let Next = document.querySelector(".fa-arrow-up");
 //creo un avento
 Next.addEventListener("click",function ()
  { //aumento indice di 1 per click
-    ++index;
+    index++;
     //detto la condizione ceh se indice è maggiore della lunghezza dell'array il valore risultera 0
     if (index>=ImgArrayScreen.length) {
         index=0
@@ -29,5 +29,17 @@ Next.addEventListener("click",function ()
 //vado a sostituire il vecchio valore scr con quello nuovo
 document.querySelector(".Mainimg img").src=ImgScreen;
 })
-
+ // creo la  variabile per l'immagine precedente
+  let Previous = document.querySelector(".fa-arrow-down");
+  Previous.addEventListener("click",function () {
+   //riduco  di uno il valore del index
+    index--;
+    // se il valore di index va sotto allo 0 lo riporto al valore massimo possibile
+    if (index < 0) {
+      index = ImgArrayScreen.length - 1;
+    }
+    let ImgScreen = ImgArrayScreen[index];
+    //vado a sostituire il vecchio valore scr con quello nuovo
+    document.querySelector(".Mainimg img").src = ImgScreen;
+  })
 
