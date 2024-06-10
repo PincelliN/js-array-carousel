@@ -21,7 +21,7 @@
   padding: 3px;
   background-color:rgba(255, 255, 555, 0.2);
   border-radius: 50%;
- 
+ z-index: 3;
 }
 .fa-arrow-up {
   top: 0;
