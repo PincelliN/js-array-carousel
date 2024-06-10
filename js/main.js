@@ -25,15 +25,39 @@ for (let i = 0; i < ImgArrayScreen.length; i++) {
 }
  const DashItems= document.querySelectorAll("#DashImg div");
 console.log(DashItems);
-DashItems[index].classList.remove("opacity")
+DashItems[index].classList.remove("opacity");
+DashItems[index].classList.add("border");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // variabile bottone
 let Next = document.querySelector(".fa-arrow-up");
+
+
+
+
+
+
+
+
+
+
 //creo un avento
 Next.addEventListener("click",function ()
  {
    DashItems[index].classList.add("opacity");
+   DashItems[index].classList.remove("border");
      //aumento indice di 1 per click
     index++;
     //detto la condizione ceh se indice è maggiore della lunghezza dell'array il valore risultera 0
@@ -42,15 +66,25 @@ Next.addEventListener("click",function ()
         index=0
     }
     DashItems[index].classList.remove("opacity");
+    DashItems[index].classList.add("border");
     //creo una variabile con il nuove elemento del array
     let ImgScreen =ImgArrayScreen[index];
     console.log(index);
 //vado a sostituire il vecchio valore scr con quello nuovo
 document.querySelector(".Mainimg img").src=ImgScreen;
 })
+
+
+
+
+
+
+
+
  // creo la  variabile per l'immagine precedente
   let Previous = document.querySelector(".fa-arrow-down");
   Previous.addEventListener("click",function () {
+    DashItems[index].classList.remove("border");
     DashItems[index].classList.add("opacity");
    //riduco  di uno il valore del index
     index--;
@@ -59,6 +93,7 @@ document.querySelector(".Mainimg img").src=ImgScreen;
     if (index < 0) {
       index = ImgArrayScreen.length - 1;
     } 
+    DashItems[index].classList.add("border");
      DashItems[index].classList.remove("opacity");
     let ImgScreen = ImgArrayScreen[index];
     //vado a sostituire il vecchio valore scr con quello nuovo
